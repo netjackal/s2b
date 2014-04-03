@@ -1,0 +1,9 @@
+<h1><%= @soup.name %></h1>
+<% if @soup.featured? %>
+  This is a featured soup
+<% else %>
+  Regular Stuff
+<% end %>
+<% if @user_is_admin %>
+  <p><%= link_to "Toggle Featured Status", togglefeatured_path(@soup) %></p>
+<% end %>

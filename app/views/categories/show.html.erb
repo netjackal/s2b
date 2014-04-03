@@ -1,0 +1,8 @@
+<h1> Details of Soup Category <em><%= @category.name %></em></h1>
+<ul>
+  <% @category.soups.each do |soup| %>
+    <li><%= link_to(soup.name, soup) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Back To Categories", categories_path %>
